@@ -13,6 +13,16 @@
     
 </head>
 <body>
-    
+
+    @yield('content')
+
+    @foreach($pizzas as $elem)
+        <div class='content'>
+            <h1>{{ $elem['name'] }}</h1>
+            <p>{{ $elem['description'] }}</p>
+        </div>
+    @endforeach 
+ 
+
 </body>
 </html>

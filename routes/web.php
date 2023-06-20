@@ -17,6 +17,8 @@ use App\Http\Controllers\PizzaController;
 //Route::get('/pizzas', [PizzaController::class, 'index']);
 
 Route::get('/', [ PizzaController::class, 'index' ] )->name('welcome');
-Route::resource('/pizzas',  PizzaController::class  );
+Route::resource('/pizzas',  PizzaController::class);
+
+// Route::resource('/welcome', PizzaController::class);
 
 

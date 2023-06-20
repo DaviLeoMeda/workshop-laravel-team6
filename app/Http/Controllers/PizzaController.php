@@ -16,6 +16,8 @@ class PizzaController extends Controller
     {
         $pizzas = Pizza::All();
 
+
+
         return view ('welcome', compact('pizzas'));
     }
 
@@ -36,9 +38,20 @@ class PizzaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request )
     {
-        //
+ 
+
+        $form_data = $request->all();
+        $new_pizza = new pizza();
+        $new_pizza->fill( $form_data );
+
+        $new_project->save();
+
+
+
+         return redirect()->route('pages.index');
+    
     }
 
     /**
